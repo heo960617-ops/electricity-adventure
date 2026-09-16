@@ -170,34 +170,6 @@ function startDialogue() {
 
 
 
-// ====================
-// 다음 대화
-// ====================
-
-function nextDialogue() {
-
-    dialogueIndex++;
-
-
-    if (dialogueIndex >= dialogues.length) {
-
-        document
-            .getElementById("dialogue-panel")
-            .classList.add("hidden");
-
-        alert("🌟 미션이 시작됩니다!");
-
-        return;
-    }
-
-
-    document
-        .getElementById("dialogue-text")
-        .textContent =
-        dialogues[dialogueIndex];
-
-}
-
 
 // ====================
 // 과학 미션 정답 확인
