@@ -372,8 +372,7 @@ function openFestival() {
         return;
     }
 
-    alert(
-        "🎆 빛 축제가 시작되었습니다!\n\n" +
-        "탐험가님의 도움으로 전기의 숲에 다시 빛이 돌아왔습니다!"
-    );
+    document.getElementById("festival-panel")
+        .classList.remove("hidden");
+
 }
