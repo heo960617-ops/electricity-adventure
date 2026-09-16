@@ -751,3 +751,49 @@ body {
         transform: scale(1.08);
     }
 }
+
+
+.festival-panel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: min(500px, 85%);
+    padding: 40px 30px;
+
+    background: rgba(20, 30, 60, 0.95);
+    border: 2px solid #ffffff;
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.4);
+
+    z-index: 100;
+}
+
+.festival-icon {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.festival-panel h2 {
+    margin-bottom: 20px;
+}
+
+.festival-panel p {
+    line-height: 1.8;
+}
+
+.final-reward {
+    margin: 25px 0;
+    padding: 15px;
+
+    border-radius: 15px;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    background: rgba(255, 255, 255, 0.1);
+}
