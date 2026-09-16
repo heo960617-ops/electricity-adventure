@@ -259,3 +259,48 @@ function startBatteryMission() {
         .classList.remove("hidden");
 
 }
+
+
+// ====================
+// 전지 마을 미션 정답 확인
+// ====================
+
+function checkBatteryAnswer(answer) {
+
+    const result =
+        document.getElementById("battery-mission-result");
+
+    if (answer === 2) {
+
+        energyCount++;
+
+        document
+            .getElementById("energy-count")
+            .textContent =
+            "⚡ 전기 조각: " + energyCount + "개";
+
+        result.textContent =
+            "🎉 정답! 전지는 전기 에너지를 공급합니다.";
+
+        result.style.color = "#8ff3ff";
+
+        setTimeout(function() {
+
+            document
+                .getElementById("battery-mission-panel")
+                .classList.add("hidden");
+
+        }, 1500);
+
+    }
+
+    else {
+
+        result.textContent =
+            "❌ 다시 생각해보세요! 전지는 회로에 전기 에너지를 공급합니다.";
+
+        result.style.color = "#ffaaaa";
+
+    }
+
+}
