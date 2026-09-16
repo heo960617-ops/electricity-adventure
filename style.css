@@ -48,7 +48,7 @@ body {
 /* 숨기기 */
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 
