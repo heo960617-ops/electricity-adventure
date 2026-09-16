@@ -512,3 +512,122 @@ body {
     transform: scale(1.05);
 
 }
+
+
+/* ==================== */
+/* NPC 대화창 */
+/* ==================== */
+
+.dialogue-panel {
+
+    position: fixed;
+
+    left: 50%;
+    bottom: 30px;
+
+    transform: translateX(-50%);
+
+    width: 700px;
+
+    max-width: 90vw;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    background: rgba(8, 25, 40, 0.97);
+
+    border: 2px solid #8ff3ff;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 0 35px rgba(143, 243, 255, 0.4);
+
+    z-index: 20;
+}
+
+
+/* NPC */
+
+.npc {
+
+    width: 120px;
+
+    text-align: center;
+
+    flex-shrink: 0;
+}
+
+
+.npc-image {
+
+    font-size: 65px;
+
+    margin-bottom: 5px;
+}
+
+
+.npc-name {
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+/* 대화 내용 */
+
+.dialogue-box {
+
+    flex: 1;
+
+    text-align: left;
+}
+
+
+#dialogue-text {
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    min-height: 70px;
+
+    margin-top: 0;
+}
+
+
+/* 다음 버튼 */
+
+.next-button {
+
+    float: right;
+
+    padding: 10px 22px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background: #8ff3ff;
+
+    color: #062033;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.next-button:hover {
+
+    transform: scale(1.05);
+
+}
