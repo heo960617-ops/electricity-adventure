@@ -60,3 +60,64 @@ function startAdventure() {
         .classList.remove("hidden");
 
 }
+
+
+// ====================
+// 장소 클릭
+// ====================
+
+function openLocation(locationName) {
+
+    const panel =
+        document.getElementById("location-panel");
+
+    const title =
+        document.getElementById("location-title");
+
+    const description =
+        document.getElementById("location-description");
+
+
+    title.textContent =
+        "📍 " + locationName;
+
+
+    if (locationName === "빛의 마을") {
+
+        description.textContent =
+            "빛의 마을입니다. 이곳에서 빛 축제를 준비하고 있습니다.";
+
+    }
+
+    else if (locationName === "전지 마을") {
+
+        description.textContent =
+            "전지 마을입니다. 전기를 공급하는 곳입니다.";
+
+    }
+
+    else if (locationName === "회로 마을") {
+
+        description.textContent =
+            "회로 마을입니다. 전기가 이동하는 길을 연구하는 곳입니다.";
+
+    }
+
+
+    panel.classList.remove("hidden");
+
+}
+
+
+
+// ====================
+// 장소 설명창 닫기
+// ====================
+
+function closeLocation() {
+
+    document
+        .getElementById("location-panel")
+        .classList.add("hidden");
+
+}
