@@ -705,3 +705,25 @@ body {
     font-weight: bold;
     line-height: 1.5;
 }
+
+
+/* ==================== */
+/* 상태 표시 */
+/* ==================== */
+
+.status-bar {
+    margin: 10px auto;
+
+    display: inline-block;
+
+    padding: 8px 20px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border: 1px solid rgba(143, 243, 255, 0.4);
+
+    border-radius: 20px;
+
+    font-size: 16px;
+    font-weight: bold;
+}
