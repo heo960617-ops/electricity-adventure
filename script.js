@@ -197,3 +197,33 @@ function nextDialogue() {
         dialogues[dialogueIndex];
 
 }
+
+
+// ====================
+// 과학 미션 정답 확인
+// ====================
+
+function checkAnswer(answer) {
+
+    const result =
+        document.getElementById("mission-result");
+
+    if (answer === 2) {
+
+        result.textContent =
+            "🎉 정답입니다! 연결된 회로에서 전기가 흐를 수 있습니다.";
+
+        result.style.color = "#8ff3ff";
+
+    }
+
+    else {
+
+        result.textContent =
+            "❌ 다시 생각해보세요! 전기가 흐를 수 있는 길이 연결되어 있어야 합니다.";
+
+        result.style.color = "#ffaaaa";
+
+    }
+
+}
