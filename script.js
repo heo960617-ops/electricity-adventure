@@ -121,3 +121,79 @@ function closeLocation() {
         .classList.add("hidden");
 
 }
+
+
+// ====================
+// NPC 대화
+// ====================
+
+let dialogueIndex = 0;
+
+
+const dialogues = [
+
+    "안녕하세요, 탐험가님!",
+
+    "큰일이 생겼어요...",
+
+    "곧 전기의 숲에서 빛 축제가 열리는데,",
+
+    "숲에 전기가 제대로 공급되지 않고 있어요.",
+
+    "빛 축제를 무사히 열려면 전기의 비밀을 찾아야 합니다!",
+
+    "탐험가님이 숲 곳곳을 돌아다니며 도와주세요!"
+
+];
+
+
+// ====================
+// 대화 시작
+// ====================
+
+function startDialogue() {
+
+    dialogueIndex = 0;
+
+
+    document
+        .getElementById("dialogue-text")
+        .textContent =
+        dialogues[dialogueIndex];
+
+
+    document
+        .getElementById("dialogue-panel")
+        .classList.remove("hidden");
+
+}
+
+
+
+// ====================
+// 다음 대화
+// ====================
+
+function nextDialogue() {
+
+    dialogueIndex++;
+
+
+    if (dialogueIndex >= dialogues.length) {
+
+        document
+            .getElementById("dialogue-panel")
+            .classList.add("hidden");
+
+        alert("🌟 미션이 시작됩니다!");
+
+        return;
+    }
+
+
+    document
+        .getElementById("dialogue-text")
+        .textContent =
+        dialogues[dialogueIndex];
+
+}
