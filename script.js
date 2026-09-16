@@ -169,6 +169,31 @@ function startDialogue() {
 }
 
 
+function nextDialogue() {
+
+    dialogueIndex++;
+
+    if (dialogueIndex >= dialogues.length) {
+
+        document
+            .getElementById("dialogue-panel")
+            .classList.add("hidden");
+
+        document
+            .getElementById("mission-panel")
+            .classList.remove("hidden");
+
+        return;
+
+    }
+
+    document
+        .getElementById("dialogue-text")
+        .textContent =
+        dialogues[dialogueIndex];
+
+}
+
 
 
 // ====================
