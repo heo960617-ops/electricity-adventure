@@ -246,3 +246,16 @@ function checkAnswer(answer) {
     }
 
 }
+
+
+// ====================
+// 전지 마을 미션 시작
+// ====================
+
+function startBatteryMission() {
+
+    document
+        .getElementById("battery-mission-panel")
+        .classList.remove("hidden");
+
+}
