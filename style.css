@@ -799,10 +799,12 @@ body {
 }
 
 
-.character-image {
-    font-size: 55px;
-    text-align: center;
+.character-image img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
 }
+
 
 .player {
     display: flex;
@@ -811,6 +813,8 @@ body {
     gap: 5px;
 }
 
-.npc-image .character-image {
-    font-size: 65px;
+.npc-image img {
+    width: 140px;
+    height: auto;
+    object-fit: contain;
 }
