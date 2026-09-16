@@ -215,6 +215,7 @@ function checkAnswer(answer) {
     if (answer === 2) {
 
         energyCount++;
+        updateFestival();
 
         document
             .getElementById("energy-count")
@@ -273,6 +274,7 @@ function checkBatteryAnswer(answer) {
     if (answer === 2) {
 
         energyCount++;
+        updateFestival();
 
         document
             .getElementById("energy-count")
@@ -317,6 +319,7 @@ function checkCircuitAnswer(answer) {
     if (answer === 2) {
 
         energyCount++;
+        updateFestival();
 
         document.getElementById("energy-count").textContent =
             "⚡ 전기 조각: " + energyCount + "개";
@@ -339,4 +342,38 @@ function checkCircuitAnswer(answer) {
 
         result.style.color = "#ffaaaa";
     }
+}
+
+function updateFestival() {
+
+    const festivalButton =
+        document.getElementById("festival-button");
+
+    if (energyCount >= 3) {
+
+        festivalButton.classList.remove("locked");
+
+        festivalButton.innerHTML =
+            '<span class="location-icon">🎆</span>' +
+            '<span>빛 축제 OPEN!</span>';
+    }
+}
+
+
+function openFestival() {
+
+    if (energyCount < 3) {
+
+        alert(
+            "🔒 아직 축제가 잠겨 있습니다!\n\n" +
+            "전기 조각 3개를 모두 모아주세요."
+        );
+
+        return;
+    }
+
+    alert(
+        "🎆 빛 축제가 시작되었습니다!\n\n" +
+        "탐험가님의 도움으로 전기의 숲에 다시 빛이 돌아왔습니다!"
+    );
 }
