@@ -148,7 +148,7 @@
 
                 <button
                     class="location circuit-village"
-                    onclick="openLocation('회로 마을')">
+                    onclick="startCircuitMission()">
 
                     <span class="location-icon">
                         🔌
@@ -307,6 +307,44 @@
     </p>
 
 </div>
+
+<!-- ==================== -->
+<!-- 회로 마을 미션 -->
+<!-- ==================== -->
+
+<div
+    id="circuit-mission-panel"
+    class="mission-panel hidden">
+
+    <h2>🔌 회로 마을의 미션</h2>
+
+    <p class="mission-question">
+        전구에 불이 켜지려면 전기가 흐를 수 있는 길이 어떻게 되어 있어야 할까요?
+    </p>
+
+    <div class="answer-buttons">
+
+        <button onclick="checkCircuitAnswer(1)">
+            🔴 중간이 끊어져 있어야 한다
+        </button>
+
+        <button onclick="checkCircuitAnswer(2)">
+            🟢 전지가 전구와 연결되어 닫힌 회로를 이루어야 한다
+        </button>
+
+        <button onclick="checkCircuitAnswer(3)">
+            🔵 전선이 하나만 연결되어 있어도 된다
+        </button>
+
+    </div>
+
+    <p
+        id="circuit-mission-result"
+        class="mission-result">
+    </p>
+
+</div>
+            
             
         </section>
 
