@@ -2,26 +2,33 @@
     box-sizing: border-box;
 }
 
+
 body {
     margin: 0;
+
     font-family: Arial, sans-serif;
+
     background: #071b2e;
+
     color: white;
+
     overflow: hidden;
 }
 
 
-/* ==================== */
-/* 전체 게임 화면 */
-/* ==================== */
 
 .game {
+
     width: 100vw;
+
     height: 100vh;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
 
     background:
         radial-gradient(
@@ -33,31 +40,38 @@ body {
 }
 
 
-/* ==================== */
-/* 각 화면 */
-/* ==================== */
 
 .screen {
+
     text-align: center;
+
     padding: 40px;
+
     width: 90%;
+
     max-width: 900px;
+
 }
 
 
-/* 숨기기 */
 
 .hidden {
+
     display: none !important;
+
 }
 
 
+
 /* ==================== */
-/* 제목 */
+/* 시작 화면 */
 /* ==================== */
 
+
 .title {
+
     font-size: 64px;
+
     margin: 0;
 
     text-shadow:
@@ -65,22 +79,26 @@ body {
         0 0 30px #7ee8ff;
 }
 
+
+
 .subtitle {
+
     font-size: 28px;
 
     margin-top: 20px;
+
     margin-bottom: 50px;
+
 }
 
 
-/* ==================== */
-/* 버튼 */
-/* ==================== */
 
 .start-button {
+
     padding: 18px 45px;
 
     font-size: 22px;
+
     font-weight: bold;
 
     color: #062033;
@@ -88,6 +106,7 @@ body {
     background: #8ff3ff;
 
     border: none;
+
     border-radius: 50px;
 
     cursor: pointer;
@@ -96,21 +115,29 @@ body {
         0 0 20px rgba(143, 243, 255, 0.6);
 
     transition: 0.2s;
+
 }
 
+
+
 .start-button:hover {
+
     transform: scale(1.08);
 
     box-shadow:
         0 0 40px rgba(143, 243, 255, 1);
+
 }
+
 
 
 /* ==================== */
 /* 이름 입력 */
 /* ==================== */
 
+
 #name-input {
+
     width: 300px;
 
     padding: 15px;
@@ -120,92 +147,368 @@ body {
     text-align: center;
 
     border: none;
+
     border-radius: 10px;
 
     outline: none;
+
 }
 
 
+
 /* ==================== */
-/* 게임 화면 */
+/* 게임 제목 */
 /* ==================== */
 
-#game-screen h1 {
+
+.game-title {
+
     font-size: 45px;
+
+    margin-bottom: 5px;
+
 }
+
+
 
 #player-name {
-    font-size: 22px;
+
+    font-size: 20px;
+
 }
+
 
 
 /* ==================== */
 /* 숲 지도 */
 /* ==================== */
 
+
 .forest-map {
-    width: 700px;
-    height: 350px;
+
+    position: relative;
+
+    width: 750px;
+
+    height: 400px;
 
     max-width: 90vw;
 
-    margin: 30px auto;
+    margin: 25px auto;
+
+
+    border-radius: 35px;
+
+
+    background:
+
+        radial-gradient(
+            circle at 50% 50%,
+            #245d4c 0%,
+            #174537 50%,
+            #0b2a25 100%
+        );
+
+
+    box-shadow:
+
+        inset 0 0 60px rgba(0, 0, 0, 0.6),
+
+        0 0 30px rgba(0, 255, 200, 0.15);
+
+
+    border: 3px solid rgba(150, 255, 230, 0.2);
+
+}
+
+
+
+/* ==================== */
+/* 장소 버튼 */
+/* ==================== */
+
+
+.location {
+
+    position: absolute;
+
+    width: 150px;
+
+    height: 110px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+
+    background: rgba(255, 255, 255, 0.12);
+
+    color: white;
+
 
     display: flex;
 
-    justify-content: space-around;
+    flex-direction: column;
+
+    justify-content: center;
+
     align-items: center;
 
-    border-radius: 30px;
 
-    background:
-        linear-gradient(
-            #173b46,
-            #0b252e
-        );
+    font-size: 18px;
+
+    font-weight: bold;
+
+
+    transition: 0.2s;
+
+
+    backdrop-filter: blur(5px);
+
+}
+
+
+
+.location:hover {
+
+    transform: scale(1.08);
+
+    background: rgba(255, 255, 255, 0.22);
 
     box-shadow:
-        inset 0 0 50px rgba(0, 0, 0, 0.5);
+        0 0 25px rgba(255, 255, 255, 0.3);
+
 }
 
 
-/* 나무 */
 
-.tree {
-    font-size: 70px;
+.location-icon {
+
+    font-size: 45px;
+
+    margin-bottom: 5px;
+
 }
 
 
-/* 캐릭터 */
 
-.character {
-    font-size: 80px;
+/* 빛의 마을 */
 
-    animation:
-        characterMove 2s infinite
-        ease-in-out;
+.light-village {
+
+    top: 25px;
+
+    left: 300px;
+
 }
 
 
-/* 캐릭터 살짝 움직이기 */
 
-@keyframes characterMove {
+/* 전지 마을 */
+
+.battery-village {
+
+    left: 50px;
+
+    bottom: 45px;
+
+}
+
+
+
+/* 회로 마을 */
+
+.circuit-village {
+
+    right: 50px;
+
+    bottom: 45px;
+
+}
+
+
+
+/* ==================== */
+/* 탐험가 */
+/* ==================== */
+
+
+.player {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 55%;
+
+    transform: translate(-50%, -50%);
+
+
+    font-size: 65px;
+
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+
+    animation: playerMove 2s infinite ease-in-out;
+
+}
+
+
+
+.player span {
+
+    font-size: 14px;
+
+    margin-top: 5px;
+
+}
+
+
+
+@keyframes playerMove {
 
     0% {
-        transform: translateY(0);
+
+        transform:
+            translate(-50%, -50%)
+            translateY(0);
+
     }
 
     50% {
-        transform: translateY(-10px);
+
+        transform:
+            translate(-50%, -50%)
+            translateY(-8px);
+
     }
 
     100% {
-        transform: translateY(0);
+
+        transform:
+            translate(-50%, -50%)
+            translateY(0);
+
     }
 
 }
 
 
+
+/* ==================== */
+/* 미션 안내 */
+/* ==================== */
+
+
 .mission {
+
     font-size: 20px;
+
+}
+
+
+
+/* ==================== */
+/* 장소 설명창 */
+/* ==================== */
+
+
+.location-panel {
+
+    position: fixed;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+
+    width: 500px;
+
+    max-width: 85vw;
+
+
+    padding: 35px;
+
+
+    border-radius: 25px;
+
+
+    background: rgba(8, 25, 40, 0.96);
+
+
+    border: 2px solid #8ff3ff;
+
+
+    box-shadow:
+        0 0 40px rgba(143, 243, 255, 0.4);
+
+
+    z-index: 10;
+
+}
+
+
+
+.location-panel h2 {
+
+    font-size: 30px;
+
+    margin-top: 0;
+
+}
+
+
+
+.location-panel p {
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+}
+
+
+
+/* ==================== */
+/* 닫기 버튼 */
+/* ==================== */
+
+
+.close-button {
+
+    padding: 12px 30px;
+
+    border: none;
+
+    border-radius: 30px;
+
+
+    background: #8ff3ff;
+
+    color: #062033;
+
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+
+    cursor: pointer;
+
+}
+
+
+.close-button:hover {
+
+    transform: scale(1.05);
+
 }
