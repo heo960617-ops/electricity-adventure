@@ -1,71 +1,51 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>전기의 숲</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #101827;
-            color: white;
-            text-align: center;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 100px auto;
-            padding: 40px;
-        }
-
-        h1 {
-            font-size: 50px;
-        }
-
-        p {
-            font-size: 20px;
-        }
-
-        button {
-            padding: 15px 30px;
-            font-size: 18px;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            transform: scale(1.05);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="container">
+    <main class="game">
 
-    <h1>⚡ 전기의 숲 ⚡</h1>
+        <section class="start-screen">
 
-    <p>
-        빛 축제를 준비하는 전기의 숲에 놀러오세요!
-    </p>
+            <h1 class="title">
+                ⚡ 전기의 숲 ⚡
+            </h1>
 
-    <button onclick="startAdventure()">
-        탐험 시작하기
-    </button>
+            <p class="subtitle">
+                빛 축제를 부탁해!
+            </p>
 
-</div>
+            <button
+                class="start-button"
+                onclick="startGame()">
 
-<script>
+                ✨ 탐험 시작하기 ✨
 
-function startAdventure() {
-    alert("전기의 숲에 오신 것을 환영합니다!");
-}
+            </button>
 
-</script>
+        </section>
+
+
+        <div class="forest">
+            🌲 🌲 🌲 🌲 🌲 🌲 🌲
+        </div>
+
+    </main>
+
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
