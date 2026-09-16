@@ -214,10 +214,25 @@ function checkAnswer(answer) {
 
     if (answer === 2) {
 
+        energyCount++;
+
+        document
+            .getElementById("energy-count")
+            .textContent =
+            "⚡ 전기 조각: " + energyCount + "개";
+
         result.textContent =
-            "🎉 정답입니다! 연결된 회로에서 전기가 흐를 수 있습니다.";
+            "🎉 정답입니다! 전기 조각을 1개 획득했습니다!";
 
         result.style.color = "#8ff3ff";
+
+        setTimeout(function() {
+
+            document
+                .getElementById("mission-panel")
+                .classList.add("hidden");
+
+        }, 1500);
 
     }
 
