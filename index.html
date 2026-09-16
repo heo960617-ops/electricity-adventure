@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
@@ -12,9 +11,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
     <main class="game">
+
 
         <!-- ==================== -->
         <!-- 시작 화면 -->
@@ -39,6 +40,7 @@
             </button>
 
         </section>
+
 
 
         <!-- ==================== -->
@@ -74,38 +76,145 @@
         </section>
 
 
+
         <!-- ==================== -->
         <!-- 게임 화면 -->
         <!-- ==================== -->
 
         <section id="game-screen" class="screen hidden">
 
-            <h1>
+
+            <h1 class="game-title">
                 🌲 전기의 숲 🌲
             </h1>
+
 
             <p id="player-name">
                 탐험가
             </p>
 
+
+
+            <!-- ==================== -->
+            <!-- 숲 지도 -->
+            <!-- ==================== -->
+
             <div class="forest-map">
 
-                <div class="tree">🌲</div>
-                <div class="tree">🌲</div>
-                <div class="character">🧑‍🔬</div>
-                <div class="tree">🌲</div>
-                <div class="tree">🌲</div>
+
+                <!-- 빛의 마을 -->
+
+                <button
+                    class="location light-village"
+                    onclick="openLocation('빛의 마을')">
+
+                    <span class="location-icon">
+                        💡
+                    </span>
+
+                    <span>
+                        빛의 마을
+                    </span>
+
+                </button>
+
+
+
+                <!-- 전지 마을 -->
+
+                <button
+                    class="location battery-village"
+                    onclick="openLocation('전지 마을')">
+
+                    <span class="location-icon">
+                        🔋
+                    </span>
+
+                    <span>
+                        전지 마을
+                    </span>
+
+                </button>
+
+
+
+                <!-- 회로 마을 -->
+
+                <button
+                    class="location circuit-village"
+                    onclick="openLocation('회로 마을')">
+
+                    <span class="location-icon">
+                        🔌
+                    </span>
+
+                    <span>
+                        회로 마을
+                    </span>
+
+                </button>
+
+
+
+                <!-- 탐험가 -->
+
+                <div class="player">
+
+                    🧑‍🔬
+
+                    <span>
+                        나의 위치
+                    </span>
+
+                </div>
+
 
             </div>
 
+
+
             <p class="mission">
-                🔎 숲을 탐험하며 빛 축제를 준비하세요!
+                🔎 숲을 탐험하며 장소를 클릭해보세요!
             </p>
+
+
+
+            <!-- ==================== -->
+            <!-- 장소 설명창 -->
+            <!-- ==================== -->
+
+            <div
+                id="location-panel"
+                class="location-panel hidden">
+
+
+                <h2 id="location-title">
+                    장소
+                </h2>
+
+
+                <p id="location-description">
+                    설명
+                </p>
+
+
+                <button
+                    class="close-button"
+                    onclick="closeLocation()">
+
+                    닫기
+
+                </button>
+
+
+            </div>
+
 
         </section>
 
 
     </main>
+
 
 
     <script src="script.js"></script>
