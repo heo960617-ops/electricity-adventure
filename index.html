@@ -130,7 +130,7 @@
 
                 <button
                     class="location battery-village"
-                    onclick="openLocation('전지 마을')">
+                    onclick="startBatteryMission()">
 
                     <span class="location-icon">
                         🔋
@@ -271,7 +271,43 @@
 
 </div>
 
+<!-- ==================== -->
+<!-- 전지 마을 미션 -->
+<!-- ==================== -->
 
+<div
+    id="battery-mission-panel"
+    class="mission-panel hidden">
+
+    <h2>🔋 전지 마을의 미션</h2>
+
+    <p class="mission-question">
+        전지는 전기 회로에서 어떤 역할을 할까요?
+    </p>
+
+    <div class="answer-buttons">
+
+        <button onclick="checkBatteryAnswer(1)">
+            💡 전구를 밝히는 빛을 직접 만든다
+        </button>
+
+        <button onclick="checkBatteryAnswer(2)">
+            ⚡ 전기 에너지를 공급한다
+        </button>
+
+        <button onclick="checkBatteryAnswer(3)">
+            🔌 전기가 이동하는 길을 만든다
+        </button>
+
+    </div>
+
+    <p
+        id="battery-mission-result"
+        class="mission-result">
+    </p>
+
+</div>
+            
         </section>
 
 
