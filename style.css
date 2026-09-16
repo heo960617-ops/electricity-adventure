@@ -807,10 +807,9 @@ body {
 
 
 .player {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
+    width: 120px;
+    height: auto;
+    object-fit: contain;
 }
 
 .npc-image img {
