@@ -631,3 +631,77 @@ body {
     transform: scale(1.05);
 
 }
+
+/* ==================== */
+/* 과학 미션 */
+/* ==================== */
+
+.mission-panel {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 600px;
+    max-width: 90vw;
+
+    padding: 35px;
+
+    background: rgba(8, 25, 40, 0.97);
+
+    border: 2px solid #8ff3ff;
+    border-radius: 25px;
+
+    box-shadow:
+        0 0 40px rgba(143, 243, 255, 0.4);
+
+    z-index: 30;
+}
+
+.mission-panel h2 {
+    font-size: 30px;
+    margin-top: 0;
+}
+
+.mission-question {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.answer-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.answer-buttons button {
+    padding: 15px;
+
+    border: none;
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.answer-buttons button:hover {
+    transform: scale(1.03);
+    background: rgba(255, 255, 255, 0.22);
+}
+
+.mission-result {
+    min-height: 30px;
+    margin-top: 20px;
+
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.5;
+}
