@@ -304,3 +304,39 @@ function checkBatteryAnswer(answer) {
     }
 
 }
+
+
+function startCircuitMission() {
+    document.getElementById("circuit-mission-panel").classList.remove("hidden");
+}
+
+function checkCircuitAnswer(answer) {
+
+    const result = document.getElementById("circuit-mission-result");
+
+    if (answer === 2) {
+
+        energyCount++;
+
+        document.getElementById("energy-count").textContent =
+            "⚡ 전기 조각: " + energyCount + "개";
+
+        result.textContent =
+            "🎉 정답! 전기가 흐를 수 있도록 닫힌 회로가 만들어져야 합니다.";
+
+        result.style.color = "#8ff3ff";
+
+        setTimeout(function() {
+            document
+                .getElementById("circuit-mission-panel")
+                .classList.add("hidden");
+        }, 1500);
+
+    } else {
+
+        result.textContent =
+            "❌ 다시 생각해보세요! 전기가 흐르려면 회로가 끊어지지 않고 연결되어 있어야 합니다.";
+
+        result.style.color = "#ffaaaa";
+    }
+}
