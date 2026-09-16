@@ -376,3 +376,22 @@ function openFestival() {
         .classList.remove("hidden");
 
 }
+
+
+function restartGame() {
+
+    energyCount = 0;
+
+    document.getElementById("energy-count").textContent =
+        "⚡ 전기 조각: 0개";
+
+    document.getElementById("festival-panel")
+        .classList.add("hidden");
+
+    document.getElementById("game-screen")
+        .classList.add("hidden");
+
+    document.getElementById("start-screen")
+        .classList.remove("hidden");
+
+}
